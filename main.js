@@ -90,17 +90,17 @@ function scanPaths(map) {
 
     console.log('Total Elevation ' + plot.elevations.length);
 
-    var i;
-    for(i = 0; i < 1000; i++) {
-        console.log('-- Computing path for ' + plot.elevations[i].v);
+    /*var i;
+        for(i = 0; i < 100; i++) {
+        console.log(i+1 +')-- Computing path for ' + plot.elevations[i].v);
         plot.computePlausiblePaths(plot.elevations[i], {distance: 1, gradient: 0, path: [plot.elevations[i].v]});
-    }
+    }*/
 
-    /*plot.elevations.forEach(function(value, index) {
+    plot.elevations.forEach(function(value, index) {
 
-        console.log('-- Computing path for ' + value.v);
+        console.log(index + ') Computing path for ' + value.v);
         plot.computePlausiblePaths(value, {distance: 1, gradient: 0, path: [value.v]});
-    });*/
+    });
     
     var id = plot.findOptimalPath();
 
