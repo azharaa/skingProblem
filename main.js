@@ -33,9 +33,9 @@ function scanPaths(map) {
     plot.plotElevation();
     console.log('Computed 2D space');
 
-    plot.elevations.forEach(function(value, index) {
+    plot.elevations.forEach(function(value) {
         if(value.c == false) {
-            plot.computePlausiblePaths(value, {distance: 1, gradient: 0, path: [value.v]});
+            plot.computePlausiblePaths(value, {distance: 1, gradient: 0});
         }
     });
     
